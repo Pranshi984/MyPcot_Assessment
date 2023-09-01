@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>CRUD Application</h1>
+
+    <!-- Registration Form -->
+    <h2>Registration</h2>
+    <form id="registrationForm">
+        <input type="text" placeholder="Name" id="name">
+        <input type="email" placeholder="Email" id="email">
+        <input type="password" placeholder="Password" id="password">
+        <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <button type="submit">Register</button>
+    </form>
+
+    <!-- Record Creation Form -->
+    <h2>Create Record</h2>
+    <form id="createRecordForm">
+        <input type="text" placeholder="Name" id="recordName">
+        <textarea placeholder="Description" id="description"></textarea>
+        <select id="category">
+            <option value="category1">Category 1</option>
+            <option value="category2">Category 2</option>
+        </select>
+        <label>Active: <input type="checkbox" id="active"></label>
+        <button type="submit">Create</button>
+    </form>
+
+    <!-- Record List -->
+    <h2>Record List</h2>
+    <input type="text" placeholder="Search by Name" id="search">
+    <select id="filter">
+        <option value="all">All</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+    </select>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Active</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="recordList">
+            <!-- Records will be displayed here dynamically -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
